@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+<bean id="MyPC" class="itea.ua.ClassPC" >
+	<property name="name" value="My_PC" />
+	<property name="motherBoard" ref="myMotherBoard" />
+	<property name="cpu" ref="cpu" />
+</bean>
+
+<bean id="myMotherBoard" class="itea.ua.ClassMotherBoard" >
+	<property name="name" value="NVIDIA" />
+	<property name="slotCount" value = "2"/>
+	<property name= "gpu" ref="gpu"/>
+</bean>
+
+<bean id="cpu" class="itea.ua.ClassCpu" >
+	<property name="name" value="Intel" />
+	<property name ="frequency" value = "1.4"/>
+</bean>
+
+<bean id="gpu" class="itea.ua.ClassGpu" >
+	<property name="name" value="NVIDIA" />
+</bean>
+
+</beans>
